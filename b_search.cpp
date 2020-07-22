@@ -19,7 +19,8 @@ int main() {
 	int var = 0;
 	cin >> var;
 	cout <<	b_search(a, var) << endl;
-
+	
+	delete a;
 	return 0;
 }
 
