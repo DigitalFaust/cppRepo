@@ -9,7 +9,7 @@ int main()
 	DList sSample(6);
 	std::cout << "sSample: " << sSample << std::endl;
 
-/*	DList thSample(sSample);
+	DList thSample(sSample);
 	std::cout << "thSample: " << thSample << std::endl;
 
 	thSample.delElem();
@@ -42,7 +42,7 @@ int main()
 	
 	std::cout << "fSample.revOutput(): ";
 	fSample.revOutput();
-	std::cout << std::endl; */
+	std::cout << std::endl; 
 	
 	fSample.exchange(sSample);
 	std::cout << "fSample.exchange(sSample):\n";
