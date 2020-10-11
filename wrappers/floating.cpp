@@ -14,35 +14,35 @@ namespace faustWrap
 	{
 	}
 
-	Floating& operator+(Floating& lftTerm, Floating& rghtTerm)
+	Floating& operator+(Floating& lftTerm, const Floating& rghtTerm)
 	{
 		lftTerm += rghtTerm;
 
 		return lftTerm;
 	}
 
-	Floating& operator-(Floating& lftTerm, Floating& rghtTerm)
+	Floating& operator-(Floating& lftTerm, const Floating& rghtTerm)
 	{
 		lftTerm -= rghtTerm;
 
 		return lftTerm;
 	}
 
-	Floating& operator*(Floating& lftTerm, Floating& rghtTerm)
+	Floating& operator*(Floating& lftTerm, const Floating& rghtTerm)
 	{
 		lftTerm *= rghtTerm;
 
 		return lftTerm;
 	}
 
-	Floating& operator/(Floating& lftTerm, Floating& rghtTerm)
+	Floating& operator/(Floating& lftTerm, const Floating& rghtTerm)
 	{
 		lftTerm /= rghtTerm;
 
 		return rghtTerm;
 	}
 
-	ostream& operator<<(ostream& outStream, Floating& outVal)
+	ostream& operator<<(ostream& outStream, const Floating& outVal)
 	{
 		outStream << outVal.var;
 
