@@ -14,35 +14,35 @@ namespace faustWrap
 	{
 	}
 
-	Boolean& operator+(Boolean& lftTerm, Boolean& rghtTerm)
+	Boolean& operator+(Boolean& lftTerm, const Boolean& rghtTerm)
 	{
 		lftTerm += rghtTerm;
 
 		return lftTerm;
 	}
 
-	Boolean& operator-(Boolean& lftTerm, Boolean& rghtTerm)
+	Boolean& operator-(Boolean& lftTerm, const Boolean& rghtTerm)
 	{
 		lftTerm -= rghtTerm;
 
 		return lftTerm;
 	}
 
-	Boolean& operator*(Boolean& lftTerm, Boolean& rghtTerm)
+	Boolean& operator*(Boolean& lftTerm, const Boolean& rghtTerm)
 	{
 		lftTerm *= rghtTerm;
 
 		return lftTerm;
 	}
 
-	Boolean& operator/(Boolean& lftTerm, Boolean& rghtTerm)
+	Boolean& operator/(Boolean& lftTerm, const Boolean& rghtTerm)
 	{
 		lftTerm /= rghtTerm;
 
 		return rghtTerm;
 	}
 
-	ostream& operator<<(ostream& outStream, Boolean& outVal)
+	ostream& operator<<(ostream& outStream, const Boolean& outVal)
 	{
 		outStream << outVal.var;
 
