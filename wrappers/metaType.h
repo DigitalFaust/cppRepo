@@ -10,21 +10,21 @@ namespace faustWrap
 			MetaType();
 			MetaType(T initValue);
 			MetaType(MetaType& initValue);
-			MetaType& operator=(MetaType& rghtSide);
-			MetaType& operator+=(MetaType& rghtSide);
-			MetaType& operator-=(MetaType& rghtSide);
-			MetaType& operator*=(MetaType& rghtSide);
-			MetaType& operator/=(MetaType& rghtSide);			
+			MetaType& operator=(const MetaType& rghtSide);
+			MetaType& operator+=(const MetaType& rghtSide);
+			MetaType& operator-=(const MetaType& rghtSide);
+			MetaType& operator*=(const MetaType& rghtSide);
+			MetaType& operator/=(const MetaType& rghtSide);			
 			MetaType& operator++();
 			MetaType& operator--();
 			MetaType& operator++(int val);
 			MetaType& operator--(int val);
-			bool operator==(MetaType& rghtSide);
-			bool operator>(MetaType& rghtSide);
-			bool operator<(MetaType& rghtSide);
-			bool operator>=(MetaType& rghtSide);
-			bool operator<=(MetaType& rghtSide);
-			bool operator!=(MetaType& rghtSide);
+			bool operator==(const MetaType& rghtSide) const;
+			bool operator>(const MetaType& rghtSide) const;
+			bool operator<(const MetaType& rghtSide) const;
+			bool operator>=(const MetaType& rghtSide) const;
+			bool operator<=(const MetaType& rghtSide) const;
+			bool operator!=(const MetaType& rghtSide) const;
 		protected:
 			T var;
 	};
@@ -47,7 +47,7 @@ namespace faustWrap
 	}
 
 	template<typename T>
-	MetaType<T>& MetaType<T>::operator=(MetaType<T>& rghtSide)
+	MetaType<T>& MetaType<T>::operator=(const MetaType<T>& rghtSide)
 	{
 		var = rghtSide.var;
 
@@ -55,7 +55,7 @@ namespace faustWrap
 	}
 
 	template<typename T>
-	MetaType<T>& MetaType<T>::operator+=(MetaType<T>& rghtSide)
+	MetaType<T>& MetaType<T>::operator+=(const MetaType<T>& rghtSide)
 	{
 		var += rghtSide.var;
 
@@ -63,7 +63,7 @@ namespace faustWrap
 	}
 
 	template<typename T>
-	MetaType<T>& MetaType<T>::operator-=(MetaType<T>& rghtSide)
+	MetaType<T>& MetaType<T>::operator-=(const MetaType<T>& rghtSide)
 	{
 		var -= rghtSide.var;
 
@@ -71,7 +71,7 @@ namespace faustWrap
 	}
 
 	template<typename T>
-	MetaType<T>& MetaType<T>::operator*=(MetaType<T>& rghtSide)
+	MetaType<T>& MetaType<T>::operator*=(const MetaType<T>& rghtSide)
 	{
 		var *= rghtSide.var;
 
@@ -79,7 +79,7 @@ namespace faustWrap
 	}
 
 	template<typename T>
-	MetaType<T>& MetaType<T>::operator/=(MetaType<T>& rghtSide)
+	MetaType<T>& MetaType<T>::operator/=(const MetaType<T>& rghtSide)
 	{
 		var /= rghtSide.var;
 
@@ -119,37 +119,37 @@ namespace faustWrap
 	}
 
 	template<typename T>
-	bool MetaType<T>::operator==(MetaType<T>& rghtSide)
+	bool MetaType<T>::operator==(const MetaType<T>& rghtSide) const 
 	{
 		return var == rghtSide.var;
 	}
 
 	template<typename T>
-	bool MetaType<T>::operator>(MetaType<T>& rghtSide)
+	bool MetaType<T>::operator>(const MetaType<T>& rghtSide) const 
 	{
 		return var > rghtSide.var;
 	}
 
 	template<typename T>
-	bool MetaType<T>::operator<(MetaType<T>& rghtSide)
+	bool MetaType<T>::operator<(const MetaType<T>& rghtSide) const 
 	{
 		return var > rghtSide.var;
 	}
 
 	template<typename T>
-	bool MetaType<T>::operator<=(MetaType<T>& rghtSide)
+	bool MetaType<T>::operator<=(const MetaType<T>& rghtSide) const 
 	{
 		return var <= rghtSide.var;
 	}
 
 	template<typename T>
-	bool MetaType<T>::operator>=(MetaType<T>& rghtSide)
+	bool MetaType<T>::operator>=(const MetaType<T>& rghtSide) const 
 	{
 		return var >= rghtSide.var;
 	}
 
 	template<typename T>
-	bool MetaType<T>::operator!=(MetaType<T>& rghtSide)
+	bool MetaType<T>::operator!=(const MetaType<T>& rghtSide) const 
 	{
 		return  var != rghtSide.var;
 	}
