@@ -15,11 +15,11 @@ namespace faustWrap
 			Double();
 			Double(float initValue);
 			Double(Double& initValue);
-			friend Double& operator+(Double& lftTerm, Double& rghtTerm);
-			friend Double& operator-(Double& lftTerm, Double& rghtTerm);
-			friend Double& operator*(Double& lftTerm, Double& rghtTerm);
-			friend Double& operator/(Double& lftTerm, Double& rghtTerm);
-			friend ostream& operator<<(ostream& outStream, Double& outVal);
+			friend Double& operator+(Double& lftTerm, const Double& rghtTerm);
+			friend Double& operator-(Double& lftTerm, const Double& rghtTerm);
+			friend Double& operator*(Double& lftTerm, const Double& rghtTerm);
+			friend Double& operator/(Double& lftTerm, const Double& rghtTerm);
+			friend ostream& operator<<(ostream& outStream, const Double& outVal);
 			friend istream& operator>>(istream& inStream, Double& inVal);
 	};
 }
