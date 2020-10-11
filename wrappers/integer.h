@@ -15,11 +15,11 @@ namespace faustWrap
 			Integer();
 			Integer(int initVal);
 			Integer(Integer& initVal);
-			friend Integer& operator+(Integer& lftTerm, Integer& rghtTerm);
-			friend Integer& operator-(Integer& lftTerm, Integer& rghtTerm);
-			friend Integer& operator*(Integer& lftTerm, Integer& rghtTerm);
-			friend Integer& operator/(Integer& lftTerm, Integer& rghtTerm);		
-			friend ostream& operator<<(ostream& outStream, Integer& outValue);
+			friend Integer& operator+(Integer& lftTerm, const Integer& rghtTerm);
+			friend Integer& operator-(Integer& lftTerm, const Integer& rghtTerm);
+			friend Integer& operator*(Integer& lftTerm, const Integer& rghtTerm);
+			friend Integer& operator/(Integer& lftTerm, const Integer& rghtTerm);		
+			friend ostream& operator<<(ostream& outStream, const Integer& outValue);
 			friend istream& operator>>(istream& inStream, Integer& inValue);
 	};
 }
