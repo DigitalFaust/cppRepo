@@ -32,13 +32,13 @@ namespace faustWrap
 	template<typename T>
 	MetaType<T>::MetaType()
 	{
-		this->var = 0;
+		var = 0;
 	}
 
 	template<typename T>
 	MetaType<T>::MetaType(T initValue)
 	{
-		this->var = initValue;
+		var = initValue;
 	}
 
 	template<typename T>
