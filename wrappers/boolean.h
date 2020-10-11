@@ -15,11 +15,11 @@ namespace faustWrap
 			Boolean();
 			Boolean(bool initValue);
 			Boolean(Boolean& initValue);
-			friend Boolean& operator+(Boolean& lftTerm, Boolean& rghtTerm);
-			friend Boolean& operator-(Boolean& lftTerm, Boolean& rghtTerm);
-			friend Boolean& operator*(Boolean& lftTerm, Boolean& rghtTerm);
-			friend Boolean& operator/(Boolean& lftTerm, Boolean& rghtTerm);
-			friend ostream& operator<<(ostream& outStream, Boolean& outVal);
+			friend Boolean& operator+(Boolean& lftTerm, const Boolean& rghtTerm);
+			friend Boolean& operator-(Boolean& lftTerm, const Boolean& rghtTerm);
+			friend Boolean& operator*(Boolean& lftTerm, const Boolean& rghtTerm);
+			friend Boolean& operator/(Boolean& lftTerm, const Boolean& rghtTerm);
+			friend ostream& operator<<(ostream& outStream, const Boolean& outVal);
 			friend istream& operator>>(istream& inStream, Boolean& inVal);
 	};
 }
